@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Products from "./pages/Products";
+import Contact from "./pages/Contaxt";
+import About from "./pages/About";
+import { useEffect } from "react";
 
 function App() {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (pathname === "/") {
+      navigate("/ka");
+    }
+  }, [pathname]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/:locale" element={<Home />} />
+      <Route path="/:locale/services" element={<Services />} />
+      <Route path="/:locale/products" element={<Products />} />
+      <Route path="/:locale/contact" element={<Contact />} />
+      <Route path="/:locale/about" element={<About />} />
+    </Routes>
   );
 }
 
