@@ -13,7 +13,7 @@ const LangDropdown = () => {
   };
   return (
     <div
-      className={`md:flex hidden flex-col  cursor-pointer absolute right-5 top-5`}
+      className={`md:flex hidden flex-col  cursor-pointer fixed right-5 top-5`}
     >
       <Dropdown
         controlClassName="flex gap-3 items-center"

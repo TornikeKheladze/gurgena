@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
       </motion.div>
       <BurgerButton
         click={() => setOpen(true)}
-        className="w-5 h-5 md:hidden absolute right-5 top-5"
+        className="w-5 h-5 md:hidden fixed right-5 top-5"
       />
     </>
   );

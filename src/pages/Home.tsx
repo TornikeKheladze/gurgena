@@ -1,9 +1,23 @@
+import Slideshow from "../components/imageSlider/Slider";
 import Layout from "../components/layout/Layout";
 
 const Home = () => {
   return (
     <Layout>
-      <h1></h1>
+      {/* <ImageSlider images={imgs} /> */}
+      <Slideshow />
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
+      <h1>daejdauidhuiah</h1>
     </Layout>
   );
 };
