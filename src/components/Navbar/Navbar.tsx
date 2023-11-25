@@ -9,7 +9,7 @@ const Navbar = () => {
   const locale = `/${i18n.language}`;
 
   return (
-    <div className="fixed z-50 top-0 border-b border-gray-200 border-opacity-50 pt-6 pb-2">
+    <div className="fixed h-20 z-50 bg-gray-900 top-0 border-b border-gray-200 border-opacity-50 pt-6 pb-2">
       <Logo />
       <LangDropdown />
       <nav className="md:flex justify-center hidden mx-auto gap-2 bg-transparent w-screen">

@@ -13,14 +13,15 @@ const LangDropdown = () => {
   };
   return (
     <div
-      className={`md:flex hidden flex-col  cursor-pointer fixed right-5 top-5`}
+      className={`md:flex hidden flex-col cursor-pointer fixed right-5 top-5 bg-white rounded-md p-2`}
     >
       <Dropdown
         controlClassName="flex gap-3 items-center"
         arrowClassName="w-3"
+        menuClassName="border-t border-gray-400"
         onChange={(e) => changeLanguage(e.value)}
-        arrowClosed={<DropdownArrow className="w-3" isOpen={false} />}
-        arrowOpen={<DropdownArrow className="w-3" isOpen={true} />}
+        arrowClosed={<DropdownArrow className="w-3 " isOpen={false} />}
+        arrowOpen={<DropdownArrow className="w-3 " isOpen={true} />}
         value={i18n.language}
         options={[
           {

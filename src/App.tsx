@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contaxt";
@@ -13,7 +13,7 @@ function App() {
     if (pathname === "/") {
       navigate("/ka");
     }
-  }, [pathname]);
+  }, [pathname, navigate]);
   return (
     <Routes>
       <Route path="/:locale" element={<Home />} />
