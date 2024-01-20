@@ -5,17 +5,16 @@ import "./BigSlider.css";
 
 const BigSlider = () => {
   const settings = {
-    dots: true,
     arrows: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   return (
-    <Slider {...settings} className="w-[90%] mx-auto rounded mt-24">
+    <Slider {...settings} className="w-full mt-20">
       <div className="bigSlide bg-1">
         <h3 className="text-3xl 2xl:text-5xl text-white">
           djaeduaejduia djaeduaejduia djaeduaejduia

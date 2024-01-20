@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       colors: {
         orangeWhite: "#DDCCAA",
+        primaryRed: "#D71820",
+        textBlack: "#333333",
       },
       height: {
         screen80: "80vh",
@@ -15,6 +17,9 @@ module.exports = {
         3: 'url("./images/3.jpg")',
         4: 'url("./images/4.jpg")',
         5: 'url("./images/5.jpg")',
+      },
+      boxShadow: {
+        button: "0px 3px 0px 0px #D71820",
       },
     },
   },

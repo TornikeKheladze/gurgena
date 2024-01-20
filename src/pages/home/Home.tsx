@@ -8,6 +8,8 @@ import CameraIcon from "../../components/icons/CameraIcon";
 import CodeIcon from "../../components/icons/CodeIcon";
 import NarrowCard from "./NarrowCard/NarrowCard";
 import office from "../../images/office.jpg";
+import ServiceContent from "../../components/Navbar/hoverDropdowns/ServiceContent";
+import { catalogueData } from "../../data/catalogueData";
 
 const first = [
   {
@@ -37,7 +39,7 @@ const Home = () => {
   return (
     <Layout>
       <BigSlider />
-      <section className="card mt-14 p-5">
+      <section className="card !w-full mt-14 p-5">
         <div>
           <h1 className="text-3xl 2xl:text-5xl mb-3">რას გთავაზობთ</h1>
           <p>
@@ -49,14 +51,14 @@ const Home = () => {
             საჭიროებებს ითვალისწინებს.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row w-full justify-around items-center p-8 gap-5">
+        {/* <div className="flex flex-col lg:flex-row w-full justify-around items-center p-8 gap-5">
           <NarrowCard data={first} />
           <NarrowCard data={first} />
           <NarrowCard data={first} />
-        </div>
+        </div> */}
       </section>
 
-      <section className="card mt-14 p-5 flex flex-col gap-8">
+      <section className="card !w-full mt-14 p-5 flex flex-col gap-8">
         <h1 className="text-3xl 2xl:text-5xl mb-3">
           რატომ გურგენა? ხუივო ზნაეტ
         </h1>
@@ -73,6 +75,30 @@ const Home = () => {
           სერვისით გამოირჩევა.
         </p>
         <img src={office} className="object-cover mx-auto rounded-lg" alt="" />
+      </section>
+      <section className="card !w-full mt-14 p-5">
+        <div>
+          <h1 className="text-3xl 2xl:text-5xl mb-3 mx-auto w-fit">
+            {t("services")}
+          </h1>
+        </div>
+        <div className=" grid md:grid-cols-3 grid-cols-2 gap-2">
+          {catalogueData.map(({ id, list, title }) => {
+            return (
+              <div
+                key={Math.random() * Math.random() + id}
+                className="cursor-pointer hover:bg-gray-400 hover:text-primaryRed h-44 rounded-3xl border border-gray-600 flex justify-between p-2 transition-all duration-300"
+              >
+                <span>{title}</span>
+                <img
+                  src={office}
+                  className="object-cover rounded-lg w-10 h-10"
+                  alt=""
+                />
+              </div>
+            );
+          })}
+        </div>
       </section>
     </Layout>
   );

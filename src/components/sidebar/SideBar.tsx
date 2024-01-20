@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import NavButton from "../buttons/NavButton";
+// import NavButton from "../buttons/NavButton";
 import Close from "../icons/Close";
 import BurgerButton from "../icons/BurgerButton";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -44,7 +44,7 @@ const Sidebar: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col h-full gap-2 p-4 pt-16"
           >
-            <NavButton
+            {/* <NavButton
               closeSidebar={() => setOpen(false)}
               label={t("services")}
               to={locale + "/services"}
@@ -63,7 +63,7 @@ const Sidebar: React.FC = () => {
               closeSidebar={() => setOpen(false)}
               label={t("about")}
               to={locale + "/about"}
-            />
+            /> */}
             <div className="flex w-full justify-center gap-2 h-14 items-center mt-8">
               <button onClick={() => changeLanguage("en")} className={en}>
                 ENG
